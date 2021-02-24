@@ -40,21 +40,20 @@ function Airplane(name) {
   */
   
  function Person(name, age) {
-  //   this.name = name;
-  //   this.age = age;
-  //   this.stomach = [];
+    this.name = name;
+    this.age = age;
+    this.stomach = [];
   //   this.toString = function(){
   //     return `${this.name}, ${this.age}`
   //   }
-  // }
-  // Person.prototype.eat =function(someFood){
-  //   if(this.stomach.length < 10){
-  //     this.stomach.push(someFood);
-
-  //   }
+   }
+  Person.prototype.eat =function(someFood){
+    if(this.stomach.length < 10){
+      this.stomach.push(someFood);
 
     }
 
+    }
     
   
  
@@ -107,11 +106,10 @@ function Airplane(name) {
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
-    1. 
-    2. 
-    3. 
-    4. 
-  */
+    1. Simple function call has 2 variations in strict mode this will return undefined everytime and in non strict mode it will return the window/ everything in the global object.
+    2. In implicit binding this key word will point to the object  of the called function. You can tell by looking to the left of the period when the function is called.
+    3. Explicit binding allows us to set this. to point/refernece a certain value with apply,call and bind or we can call a function with a specific value for this using apply and call.
+    4. new Binding allows us to use the new keyword to create a new object and the this keyword will point to /reference it.
   
   
   ///////// END OF CHALLENGE /////////
