@@ -51,16 +51,16 @@ function Airplane(name) {
     }
 
     }
-    Person.prototype.poop  = function(){
+ Person.prototype.poop  = function(){
      return this.stomach = [];
     }
   
 
-    Person.prototype.toString = function(){
+ Person.prototype.toString = function(){
       return `${this.name}, ${this.age}`
          }
-         const james =new Person('James', 20);
-         console.log(james.toString());
+const james = new Person('James', 20);
+console.log(james.toString());
       
  
  
@@ -105,10 +105,16 @@ function Airplane(name) {
           + Should return a string "Playing with x", x being the favorite toy.
   */
  function Baby(name, age, favoriteToy) {
-   this.name = this.name;
-   this.age = this.age;
- 
+   Person.call(this,name, age);
+    this.favoriteToy = favoriteToy;
  }
+   Baby.prototype = Object.create(Person.prototype)
+
+   Baby.prototype.play = function(){
+   return `Playing with ${this.favoriteToy}`
+ }
+   
+ 
   /* 
     TASK 4
     In your own words explain the four principles for the "this" keyword below:
